@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ARG MPLABX_VERSION=6.05
+ARG MPLABX_VERSION=5.50
 ARG XC8_VERSION=2.20
 
 # Install the dependencies

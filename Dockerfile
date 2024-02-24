@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ARG MPLABX_VERSION=5.50
+ARG MPLABX_VERSION=6.15
 ARG XC8_VERSION=2.46
 
 # Install the dependencies
@@ -20,7 +20,8 @@ RUN wget -nv -O /tmp/xc8 "https://ww1.microchip.com/downloads/aemDocuments/docum
   rm /tmp/xc8
 
 # Download and install MPLAB X
-RUN wget -nv -O /tmp/mplabx "https://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v${MPLABX_VERSION}-linux-installer.tar" &&\
+
+RUN wget -nv -O /tmp/mplabx "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v${MPLABX_VERSION}-linux-installer.tar" &&\
   cd /tmp && \
   tar -xf mplabx && \
   rm mplabx && \
